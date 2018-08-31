@@ -1,0 +1,16 @@
+[package]
+name = "wasm-bindgen-test"
+version = "0.1.0"
+authors = ["MarioR <m_reder10@cs.uni-kl.de>"]
+
+[lib]
+path = "src/rust/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = "1.0"
+serde_derive = "1.0"
+
+[dependencies.wasm-bindgen]
+version = "^0.2"
+features = ["nightly", "serde-serialize"]
